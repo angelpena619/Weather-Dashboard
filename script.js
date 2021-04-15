@@ -15,7 +15,7 @@ function weatherData(lat, lon,city){
   
     console.log(data)
 
-
+  
   $('#temperature').text(data.current.temp)
   $('#wind-speed').text(data.current.wind_speed)
   $('#uv-index').text(data.current.uvi)
@@ -27,6 +27,8 @@ function weatherData(lat, lon,city){
   $('#futureHumidity1').text(data.daily[1].humidity + "%")
   $('#futureTemp1').text(data.daily[1].temp.day)
 
+
+
   $('#futureHumidity2').text(data.daily[2].humidity + "%")
   $('#futureTemp2').text(data.daily[2].temp.day)
 
@@ -35,7 +37,15 @@ function weatherData(lat, lon,city){
 
   $('#futureHumidity4').text(data.daily[4].humidity + "%")
   $('#futureTemp4').text(data.daily[4].temp.day)
-   
+  
+  var test = document.createElement("li")
+  test.className = ("search-history")
+  test.innerHTML=city
+  $('#history').append(test)
+
+
+
+
   }); 
 }
 
@@ -49,7 +59,7 @@ function handleSearch(){
     console.log(response)
     let lat = response.coord.lat;
     let lon = response.coord.lon;
-    let city = "seattle";
+    //let city = "seattle";
     weatherData(lat, lon, city);
   })
 }

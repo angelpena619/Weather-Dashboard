@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="jumbotron container-fluid mt-2 text-center p-2" >
@@ -20,12 +22,12 @@
             <div class="input-group mb-3">
                 <input type="text" class="form-control"id="search-city" aria-label="City Search" aria-describedby="search-button">
                 <div class="input-group-append">
-                    <button class=" btn bg-primary text-light" id="search-button"><i class="fa fa-search"></i></button>
+                    <button class=" btn bg-primary text-dark" id="search-button"><i class="fa fa-search"></i></button>
                 </div>
             </div>
-            <button class=" btn btn-primary" type="button" id="clear-history">Clear history</button>
-            <ul class="list-group">
+            <ul class="list-group" id="history">
             </ul>
+            <button class=" btn btn-primary" type="button" id="clear-history">Clear history</button>
         </div>   
         <div class="col-sm-8">
             <div class="row ml-2 border border-dark rounded">
