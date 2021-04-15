@@ -6,7 +6,7 @@ searchBtn.addEventListener("click", handleSearch)
 function weatherData(lat, lon,city){
     console.log("click")
     
-    fetch('https://api.openweathermap.org/data/2.5/onecall?lat='+lat+'&lon='+lon+'&appid='+apiKey)
+    fetch('https://api.openweathermap.org/data/2.5/onecall?units=imperial&lat='+lat+'&lon='+lon+'&appid='+apiKey)
   .then(function(response)  {
       return response.json()
      })
@@ -41,8 +41,9 @@ function weatherData(lat, lon,city){
 
 
 function handleSearch(){
+  const city = $('#search-city').val()
   $.ajax({
-    url: `https://api.openweathermap.org/data/2.5/weather?q=seattle&units=imperial&appid=939af84008825816b09df6ace4af573b`,
+    url: `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=939af84008825816b09df6ace4af573b`,
     method: "GET"
   }).then(function (response) {
     console.log(response)
