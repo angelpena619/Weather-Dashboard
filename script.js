@@ -15,6 +15,20 @@ function weatherData(lat, lon,city){
   
     console.log(data)
 
+    
+    
+    
+    var icon = document.createElement("i")
+    var mainWeather = data.current.weather[0].main
+    icon.className = pickWeather(mainWeather) 
+
+    
+    console.log(mainWeather)
+
+
+    $("#weather-icon").empty().append(icon)
+
+
   
     $('#temperature').text(data.current.temp)
     $('#wind-speed').text(data.current.wind_speed)
@@ -54,7 +68,18 @@ function clearHistory(){
 }
 
 
+function pickWeather (weather) {
+  if (weather === "Clouds") {
+      return "fas fa-cloud"
+  }
 
+  if (weather === "Clear") {
+    return "fas fa-sun"
+  }
+  return "fas fa-question"
+
+
+}
 
 function handleSearch(){
   const city = $('#search-city').val()
