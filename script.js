@@ -16,38 +16,44 @@ function weatherData(lat, lon,city){
     console.log(data)
 
   
-  $('#temperature').text(data.current.temp)
-  $('#wind-speed').text(data.current.wind_speed)
-  $('#uv-index').text(data.current.uvi)
-  $('#humidity').text(data.current.humidity + "%")
+    $('#temperature').text(data.current.temp)
+    $('#wind-speed').text(data.current.wind_speed)
+    $('#uv-index').text(data.current.uvi)
+    $('#humidity').text(data.current.humidity + "%")
 
-  $('#futureHumidity0').text(data.daily[0].humidity + "%")
-  $('#futureTemp0').text(data.daily[0].temp.day)
+    $('#futureHumidity0').text(data.daily[0].humidity + "%")
+    $('#futureTemp0').text(data.daily[0].temp.day)
+
+    $('#futureHumidity1').text(data.daily[1].humidity + "%")
+    $('#futureTemp1').text(data.daily[1].temp.day)
+
+
+
+    $('#futureHumidity2').text(data.daily[2].humidity + "%")
+    $('#futureTemp2').text(data.daily[2].temp.day)
+
+    $('#futureHumidity3').text(data.daily[3].humidity + "%")
+    $('#futureTemp3').text(data.daily[3].temp.day)
+
+    $('#futureHumidity4').text(data.daily[4].humidity + "%")
+    $('#futureTemp4').text(data.daily[4].temp.day)
+
+    var test = document.createElement("li")
+    test.className = ("search-history")
+    test.innerHTML=city
+    $('#history').append(test)
   
-  $('#futureHumidity1').text(data.daily[1].humidity + "%")
-  $('#futureTemp1').text(data.daily[1].temp.day)
-
-
-
-  $('#futureHumidity2').text(data.daily[2].humidity + "%")
-  $('#futureTemp2').text(data.daily[2].temp.day)
-
-  $('#futureHumidity3').text(data.daily[3].humidity + "%")
-  $('#futureTemp3').text(data.daily[3].temp.day)
-
-  $('#futureHumidity4').text(data.daily[4].humidity + "%")
-  $('#futureTemp4').text(data.daily[4].temp.day)
-  
-  var test = document.createElement("li")
-  test.className = ("search-history")
-  test.innerHTML=city
-  $('#history').append(test)
-
-
-
-
   }); 
 }
+
+$('#clear-history').on('click',clearHistory)
+function clearHistory(){
+  $("#history").empty()
+  
+
+}
+
+
 
 
 function handleSearch(){
