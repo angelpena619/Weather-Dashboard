@@ -1,4 +1,17 @@
 ## Your Task
+for this assignment, we were asked to create a weather dashboard using 3rd party API.
+using the fetch method to receive response from https://openweathermap.org/api and asking for the data to be returned formatted using JSON.
+while using jquery to manipulate the DOM dynamically to update real time information to display the current weather along with 5 day forcast
+we will be receiving this realtime information from openweather API.
+
+all this will happen when a user inputs the city and clicks search event, using a function.
+
+after user submits desired search it will append search history to the bottom of the search bar this will be known as "search history" 
+the search history will continue to append untill user clicks "clear search history" by usung jquery "empty" parameter. 
+
+bootstrap was used for HTML elements along with another 3rd party API to recive icons, I later realized I did not need a third party for the icons, unfortunately time
+got the best of me, but I did make the attempt. 
+
 
 https://github.com/angelpena619/Weather-Dashboard
 
@@ -29,7 +42,7 @@ THEN I am presented with current and future conditions for that city and that ci
 WHEN I view current weather conditions for that city
 THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index
 WHEN I view the UV index
-THEN I am presented with a color that indicates whether the conditions are favorable, moderate, or severe
+THEN I am presented with a color that indicates whether the conditions rd are favorable, moderate, or severe
 WHEN I view future weather conditions for that city
 THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, and the humidity
 WHEN I click on a city in the search history
